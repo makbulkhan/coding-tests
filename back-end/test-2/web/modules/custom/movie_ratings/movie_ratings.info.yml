@@ -1,0 +1,9 @@
+name: 'Movie Ratings'
+type: module
+description: 'Module to display and store movie ratings for the Movies content type.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+

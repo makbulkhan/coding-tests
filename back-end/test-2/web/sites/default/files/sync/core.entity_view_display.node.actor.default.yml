@@ -1,0 +1,42 @@
+uuid: 454c198b-37bb-420f-8e29-d6e3efd47572
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.actor.body
+    - field.field.node.actor.field_image
+    - image.style.medium
+    - node.type.actor
+  module:
+    - image
+    - text
+    - user
+id: node.actor.default
+targetEntityType: node
+bundle: actor
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

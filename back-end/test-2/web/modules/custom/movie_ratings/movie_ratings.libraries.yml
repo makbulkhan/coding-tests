@@ -1,0 +1,11 @@
+movie_ratings:
+  version: 1.x
+  css:
+    theme:
+      css/movie_ratings.css: {}
+  js:
+    js/movie_ratings.js: {}
+  dependencies:
+    - core/jquery
+    - code/drupal
+

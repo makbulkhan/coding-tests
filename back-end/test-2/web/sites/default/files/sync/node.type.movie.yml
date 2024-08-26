@@ -1,0 +1,17 @@
+uuid: 615f5392-b845-4aa2-8510-b7c2a11acb32
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Movie
+type: movie
+description: 'Use <em>movies</em> for the movies.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,9 @@
+<div class="movie-rating-section">
+  <div class="movie-stars">
+    {{ stars|raw }}<span class="movie-average">({{ average |number_format(1, '.', ',') }})</span>
+  </div>
+  <div class="movie-rating-form">
+    {{ form|raw }}
+  </div>
+</div>
+

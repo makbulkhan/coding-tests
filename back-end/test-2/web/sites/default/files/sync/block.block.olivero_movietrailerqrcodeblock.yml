@@ -1,0 +1,28 @@
+uuid: 9c976e43-5e66-497d-a7e4-9dbebd6b1ac7
+langcode: en
+status: true
+dependencies:
+  module:
+    - movie_ratings
+    - node
+  theme:
+    - olivero
+id: olivero_movietrailerqrcodeblock
+theme: olivero
+region: sidebar
+weight: -7
+provider: null
+plugin: movie_trailer_qr_code_block
+settings:
+  id: movie_trailer_qr_code_block
+  label: 'Movie Trailer QR Code Block'
+  label_display: visible
+  provider: movie_ratings
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      movie: movie

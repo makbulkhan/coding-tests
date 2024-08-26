@@ -1,0 +1,7 @@
+services:
+  movie_ratings.movie_rating_form:
+    class: Drupal\movie_ratings\Form\MovieRatingForm
+    arguments: ['@flood']
+    tags:
+      - { name: form, id: movie_rating_form }
+

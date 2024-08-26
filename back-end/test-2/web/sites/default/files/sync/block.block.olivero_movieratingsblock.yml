@@ -1,0 +1,28 @@
+uuid: 8f9158d6-a1b2-4d0b-908d-cb07fb7b52f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - movie_ratings
+    - node
+  theme:
+    - olivero
+id: olivero_movieratingsblock
+theme: olivero
+region: sidebar
+weight: -6
+provider: null
+plugin: movie_ratings_block
+settings:
+  id: movie_ratings_block
+  label: 'Movie Ratings'
+  label_display: visible
+  provider: movie_ratings
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      movie: movie

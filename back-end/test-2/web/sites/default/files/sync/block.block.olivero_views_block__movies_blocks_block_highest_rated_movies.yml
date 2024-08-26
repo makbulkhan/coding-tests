@@ -1,0 +1,29 @@
+uuid: 8a7f3eda-eef9-452f-b807-0cbe8eec9183
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.movies_blocks
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__movies_blocks_block_highest_rated_movies
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:movies_blocks-block_highest_rated_movies'
+settings:
+  id: 'views_block:movies_blocks-block_highest_rated_movies'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /movie-list

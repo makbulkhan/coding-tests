@@ -1,0 +1,29 @@
+uuid: c7510fa4-176c-4362-9470-7878b0fad777
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.movies_blocks
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__movies_blocks_block_popular_movies
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:movies_blocks-block_popular_movies'
+settings:
+  id: 'views_block:movies_blocks-block_popular_movies'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /movie-list

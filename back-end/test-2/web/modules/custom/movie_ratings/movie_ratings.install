@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function movie_ratings_install() {
+  // Create the movie_ratings table.
+  \Drupal::database()->schema()->createTable('movie_ratings', [
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'movie_id' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'rating' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'ip_address' => [
+        'type' => 'varchar',
+        'length' => 45,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ]);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function movie_ratings_uninstall() {
+  // Drop the movie_ratings table.
+  \Drupal::database()->schema()->dropTable('movie_ratings');
+}
+

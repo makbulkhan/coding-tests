@@ -1,0 +1,96 @@
+/* Custom CSS for movie ratings */
+#rating-container {
+  margin-top: 20px;
+}
+
+#average-rating {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* movie_ratings.css */
+.star {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: linear-gradient(
+    to right,
+    #ffd700 var(--fill, 0%),
+    #ccc var(--fill, 0%),
+    #ccc 100%
+  );
+  background-size: 100% 100%;
+}
+
+/* Different fill percentages */
+.fill-0 {
+  --fill: 0%;
+}
+
+.fill-10 {
+  --fill: 10%;
+}
+
+.fill-20 {
+  --fill: 20%;
+}
+
+.fill-30 {
+  --fill: 30%;
+}
+
+.fill-40 {
+  --fill: 40%;
+}
+
+.fill-50 {
+  --fill: 50%;
+}
+
+.fill-60 {
+  --fill: 60%;
+}
+
+.fill-70 {
+  --fill: 70%;
+}
+
+.fill-80 {
+  --fill: 80%;
+}
+
+.fill-90 {
+  --fill: 90%;
+}
+
+.fill-100 {
+  --fill: 100%;
+}
+
+.movie-average {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+.qr-code-block {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.qr-code-block p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.qr-code-block img {
+  max-width: 200px;
+  height: auto;
+}
+

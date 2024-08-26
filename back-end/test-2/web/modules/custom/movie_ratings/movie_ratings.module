@@ -1,0 +1,116 @@
+<?php
+
+/**
+ * @file
+ * Movie Ratings module.
+ */
+
+/**
+* @file
+* Primary module hooks for Custom Rate module.
+*
+* @DCG
+* This file is no longer required in Drupal 8.
+* @see https://www.drupal.org/node/2217931
+*/
+function movie_ratings_views_data() {
+  $data['movie_ratings']['table']['group'] = t('Movie Ratings');
+  $data['movie_ratings']['table']['base'] = array(
+    'title' => t('Movie Ratings'),
+    'help' => t('Integration with Movie Ratings Table'),
+  );
+  $data['movie_ratings']['table']['join'] = array(
+    'node_field_data' => array(
+      'left_field' => 'nid',
+      'field' => 'movie_id',
+    ),
+  );
+  $data['movie_ratings']['id'] = [
+    'title' => 'Movie rating Id',
+    'field' => [
+      'id' => 'numeric',
+    ],
+    'sort' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'numeric',
+    ],
+    'argument' => [
+      'id' => 'numeric',
+    ],
+  ];
+  $data['movie_ratings']['movie_id'] = [
+    'title' => 'Movie Node Id',
+    'field' => [
+      'id' => 'numeric',
+    ],
+    'sort' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'numeric',
+    ],
+    'argument' => [
+      'id' => 'numeric',
+    ],
+    'relationship' => [
+      'base' => 'node_field_data',
+      'base field' => 'nid',
+      'id' => 'standard',
+      'label' => 'Movie Node Relationship',
+    ],
+  ];
+  $data['movie_ratings']['rating'] = [
+    'title' => 'Rating',
+    'field' => [
+      'id' => 'numeric',
+    ],
+    'sort' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'numeric',
+    ],
+    'argument' => [
+      'id' => 'numeric',
+    ],
+  ];
+  $data['movie_ratings']['ip_address'] = [
+    'title' => 'IP Address',
+    'field' => [
+      'id' => 'standard',
+    ],
+    'sort' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'string',
+    ],
+    'argument' => [
+      'id' => 'string',
+    ],
+  ];
+  return $data;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function movie_ratings_theme() {
+  return [
+    'movie_trailer_qr_code' => [
+      'variables' => [
+        'image' => NULL,
+        'caption' => NULL,
+      ],
+    ],
+    'movie_rating_section' => [
+      'variables' => [
+	'form' => NULL,
+        'stars' => NULL,
+        'average' => NULL,
+      ],
+    ],
+  ];
+}
