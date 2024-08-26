@@ -181,3 +181,16 @@ ddev drush cr
   This block will show the video url in the form of QR code and configured on Movie node page.
 - **Movie Ratings:**
   This bloxk will show the average rating of movie in the form of Stars and decimal values. This block also contain the form to accept the ratings in the range of 1 to 5.
+
+
+## Added a live version as well on Pantheon.io
+
+**Demo URL**
+
+* [https://dev-motion-picture.pantheonsite.io/](https://dev-motion-picture.pantheonsite.io/)
+
+## Shield Authentiation
+
+**Username:**  converse
+
+**Password:**  conversedev
