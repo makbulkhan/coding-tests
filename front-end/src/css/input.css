@@ -5,7 +5,9 @@
 /* src/css/input.css */
 @font-face {
     font-family: 'Soehne';
+    src: local('Soehne'), url(../fonts/soehne-buch.woff2) format('woff2');
     src: local('Soehne'), url(../fonts/soehne-halbfett.woff2) format('woff2');
+    src: local('Soehne'), url(../fonts/soehne-kraftig.woff2) format('woff2');
 }
 * {
     font-family: 'Soehne';
@@ -18,21 +20,24 @@
 }
 .pricing-cards-shadow,
 .pricing-cards-shadow hr {
-    @apply border border-gray-100 dark:border-gray-600;
+    @apply border border-gray-200 dark:border-gray-700;
 }
 .custom-button-primary {
-    @apply px-5 py-2 font-medium rounded text-sm text-center border border-teal-700 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800;
+    @apply px-5 py-3 font-medium rounded text-sm text-center border border-teal-700 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800;
 }
 .custom-button-secondary {
-    @apply px-5 py-2 font-medium rounded text-sm text-center border border-teal-700 text-teal-700 hover:text-white  hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300  dark:border-teal-500 dark:text-teal-500 dark:hover:text-white dark:hover:bg-teal-500 dark:focus:ring-teal-800;
+    @apply px-5 py-3 font-medium rounded text-sm text-center border border-teal-700 text-teal-700 hover:text-white  hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300  dark:border-teal-500 dark:text-teal-500 dark:hover:text-white dark:hover:bg-teal-500 dark:focus:ring-teal-800;
 }
 .custom-button-teritary {
-    @apply px-5 py-2 font-medium rounded text-sm text-center border border-white hover:border-teal-700 text-white hover:text-white hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300  dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-teal-500 dark:focus:ring-teal-800;
+    @apply px-5 py-3 font-medium rounded text-sm text-center border border-white hover:border-teal-700 text-white hover:text-white hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300  dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-teal-500 dark:focus:ring-teal-800;
 }
 .custom-plan-row {
-    @apply border-b border-l border-b-gray-300 border-l-gray-300 text-gray-600 text-center h-20 flex items-center justify-center px-6;
+    @apply border-b border-l border-b-gray-300 border-l-gray-300 text-gray-500 text-center h-20 flex items-center justify-center px-6;
 }
-.custom-plan-row > span {
+.custom-plan-row > span.active {
+    @apply w-5 h-5 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0;
+}
+.custom-plan-row > span.disable {
     @apply w-5 h-5 inline-flex items-center justify-center bg-gray-200 text-white rounded-full flex-shrink-0;
 }
 .custom-plan-desc {
@@ -100,9 +105,8 @@
 }
 
 .social-menu {
-    @apply items-center lg:text-base flex justify-center w-10 h-10 border rounded-[5px];
+    @apply items-center lg:text-base flex justify-center w-8 h-8 border rounded-[5px];
 }
-
 
 footer ul li a {
     @apply text-gray-300 hover:text-white text-sm;
