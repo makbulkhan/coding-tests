@@ -30,6 +30,8 @@ You have 48 hours from now to return this exercise back to us. Good luck, and fe
 
 This project is a responsive website built using **HTML**, **Tailwind CSS**, and **jQuery** for the hamburger menu functionality. It aims to implement a fully responsive design for a pricing plan page with proper layout on mobile, tablet, and desktop devices.
 
+**Check the screenshots folder for implemented design for all mobile, tablet, desktop along with Hamburger screenshot.**
+
 
 ## Table of Contents
 - [Project Structure](#project-structure)
@@ -44,6 +46,7 @@ This project is a responsive website built using **HTML**, **Tailwind CSS**, and
 
 ```plaintext
 front-end/
+├── screenshorts/
 ├── src/
 │   ├── css/
 │   │   └── input.css
